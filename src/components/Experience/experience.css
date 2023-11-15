@@ -1,0 +1,26 @@
+.years-count {
+    font-size: 100px!important;
+}
+.title {
+    font-size: 36px;
+}
+.card-style {
+    padding: 50px 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.company-logo {
+    object-fit: contain;
+    max-width: 100%;
+}
+.position-title {
+    padding: 60px 10px 10px 10px;
+}
+h3 {
+    font-size: 24px !important;
+    font-weight: 400 !important;
+    line-height: 1.4em !important;
+}

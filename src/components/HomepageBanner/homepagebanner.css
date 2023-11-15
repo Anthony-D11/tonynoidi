@@ -1,0 +1,30 @@
+.home-section {
+    padding-top: 50px!important;
+    position: relative;
+}
+
+.home-content {
+    color: #58595b;
+    padding: 5rem 0 2rem!important;
+    text-align: left;
+}
+
+.first-role {
+    font-size: 4em!important;
+    margin-bottom: 0!important;
+    padding-bottom: 0!important;
+    padding-left: 20px!important;
+    padding-top: 120px!important;
+}
+.first-role-description {
+    font-size: 1.8em!important;
+    padding-left: 50px!important;
+}
+.linkedin-connect {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.social-connect {
+    width: 50% !important;
+}

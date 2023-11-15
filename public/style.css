@@ -1,0 +1,20 @@
+:root {
+    --font-heading: 'Ivar Text', 'Georgia', serif;
+    --font-body:'DM Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background: transparent;
+}
+
+body {
+    font-family: var(--font-body);
+}
+
+section {
+    margin-bottom: 80px;
+}
