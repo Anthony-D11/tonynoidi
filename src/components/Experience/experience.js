@@ -11,7 +11,7 @@ const cardColor = ["#FFF8F8", "#F3F5FF", "#EBF8F8"];
 
 const Experience = () => {
     let work = [];
-    for (let i = 0; i < 3; i++) {
+    for (let i = 3; i > 0; i--) {
         work.push(
             <div className="col-md-3">
                 <div className="card-style" style={{backgroundColor:cardColor[i]}}>
