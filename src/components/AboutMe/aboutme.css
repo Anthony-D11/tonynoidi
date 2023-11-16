@@ -1,0 +1,29 @@
+.profile-picture {
+    object-fit: contain;
+    max-width: 100%;
+}
+
+.profile-picture-container {
+    padding-right: 150px!important;
+}
+
+.about-me-container {
+    padding-left: 100px!important;
+}
+.about-me {
+    font-size: 20px;
+    line-height: 1.75em;
+}
+.introduction {
+    padding-top: 30px;
+}
+.about-me h2 {
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 1.3em;
+}
+.subtitle {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+}

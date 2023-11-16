@@ -1,18 +1,31 @@
 import React from 'react'
 import './experience.css';
-import CIC from '../../assets/Canadian-Institute-for-Cybersecurity.png'
-import Cvent from '../../assets/Cvent.png'
-import Sonrai from '../../assets/Sonrai.png'
+import Data from '../../assets/data.json';
 
-var cardColor = {
-    "First": "#FFF8F8",
-    "Second": "#F3F5FF",
-    "Third": "#EBF8F8"
-}
+const workExperience = Data["work-experience"];
+var yearsOfExperience = Data["years-experience"];
 
-var yearsOfExperience = 2;
+
+const cardColor = ["#FFF8F8", "#F3F5FF", "#EBF8F8"];
+
 
 const Experience = () => {
+    let work = [];
+    for (let i = 0; i < 3; i++) {
+        work.push(
+            <div className="col-md-3">
+                <div className="card-style" style={{backgroundColor:cardColor[i]}}>
+                    <div className="company-logo-container">
+                        <img src={workExperience[i].logo} alt="" className="company-logo"/>
+                    </div>
+                    <div className="position-title">
+                        <h3>{workExperience[i].position} ({workExperience[i].period}), {workExperience[i].city}, {workExperience[i].country}</h3>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
   return (
     <section className="section-section">
         <div className="container">
@@ -24,36 +37,7 @@ const Experience = () => {
                     </div>
                 </div>
                 <div className="col-md-1"></div>
-                <div className="col-md-3">
-                    <div className="card-style" style={{backgroundColor:cardColor.First}}>
-                        <div className="company-logo-container">
-                            <img src={CIC} alt="" className="company-logo"/>
-                        </div>
-                        <div className="position-title">
-                            <h3>Security Application Developer Intern (2022), Fredericton, Canada</h3>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-3">
-                    <div className="card-style" style={{backgroundColor:cardColor.Second}}>
-                        <div className="company-logo-container">
-                            <img src={Cvent} alt="" className="company-logo"/>
-                        </div>
-                        <div className="position-title">
-                            <h3>Software Developer Intern (2022-2023), Fredericton, Canada</h3>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-3">
-                    <div className="card-style" style={{backgroundColor:cardColor.Third}}>
-                        <div className="company-logo-container">
-                            <img src={Sonrai} alt="" className="company-logo"/>
-                        </div>
-                        <div className="position-title">
-                            <h3>Junior Software Engineer Intern (2023), Fredericton, Canada</h3>
-                        </div>
-                    </div>
-                </div>
+                {work}
             </div>
         </div>
     </section>

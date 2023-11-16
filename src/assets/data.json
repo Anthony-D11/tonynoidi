@@ -1,0 +1,29 @@
+{
+    "profile-picture": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/306604825_1106193139988498_2823113627616380466_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=E0RdggCG3csAX85bs8f&_nc_ht=scontent-lga3-2.xx&oh=00_AfCpY8M-cbXzCJaBbb00_AS5XVbzzKXxOfs0YEwVx8cl6A&oe=6559BAB1",
+    "work-experience": [
+        {
+            "position": "Junior Software Engineer Intern",
+            "period": "2023",
+            "city": "Fredericton",
+            "country": "Canada",
+            "logo": "https://live.staticflickr.com/65535/53335029106_2200a11ee9_o.png"
+        },
+        {
+            "position": "Software Developer Intern",
+            "period": "2022-2023",
+            "city": "Fredericton",
+            "country": "Canada",
+            "logo": "https://live.staticflickr.com/65535/53335031866_1bbb284502_o.png"
+        },
+        {
+            "position": "Security Application Developer Intern",
+            "period": "2022",
+            "city": "Fredericton",
+            "country": "Canada",
+            "logo": "https://live.staticflickr.com/65535/53335513130_dfb70d7c12_o.png"
+        }
+    ],
+    "years-experience": 2,
+    "about-me-vn": "Hiện tại mình đang theo học ngành Computer Science (Khoa học máy tính) tại đại học New Brunswick, Canada. Mình đã có cơ hội được làm việc ở nhiều công ty và tập đoàn công nghệ lớn hàng đầu ở Canada. Mình có một kênh Youtube để chia sẻ những kinh nghiệm về lập trình và chuyện du học. Mình còn nhiều thiếu sót lắm nên hy vọng không chỉ đem lại cho các bạn một số kinh nghiệm mà còn mong muốn học hỏi nhiều thứ từ mọi người nữa ❤️",
+    "about-me-en": "Currently, I am pursuing Computer Science at University of New Brunswick, Canada. I had the opportunity to work in many leading tech companies in Canada. I have a Youtube channel to share my experience about programming and studying abroad. I still have a lot of shortcomings so I hope to share with you my experience but I also want to learn things from everyone ❤️" 
+}
