@@ -30,8 +30,8 @@ const Experience = () => {
     <section className="section-section">
         <div className="container">
             <div className="row">
-                <div className="col-md-2">
-                    <div className="title">
+                <div className="col-md-2 d-flex experience-title-container">
+                    <div className="experience-title">
                         <div className="years-count">0<span>{yearsOfExperience}</span></div>
                         <h2>Years Experience in Field</h2>
                     </div>

@@ -7,16 +7,25 @@
     color: #58595b;
     padding: 5rem 0 2rem!important;
     text-align: left;
+    position: relative;
+    height: 700px;
 }
 
-.first-role {
-    font-size: 4em!important;
+.row div{
+    z-index: 1;
+}
+
+.role {
+    font-size: 3em!important;
     margin-bottom: 0!important;
     padding-bottom: 0!important;
-    padding-left: 20px!important;
     padding-top: 120px!important;
+    text-align: center;
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;;
+    font-style: normal;
+    font-weight: 700;
 }
-.first-role-description {
+.role-description {
     font-size: 1.8em!important;
     padding-left: 50px!important;
 }
@@ -27,4 +36,12 @@
 }
 .social-connect {
     width: 50% !important;
+}
+.homepage-banner-image {
+    position: absolute;
+    height: calc(100% - 5rem - 2rem);
+    margin: auto;
+    z-index: 0;
+    left: 0;
+    right: 0;
 }

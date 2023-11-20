@@ -7,23 +7,26 @@
     padding-right: 150px!important;
 }
 
-.about-me-container {
+.aboutme-container {
     padding-left: 100px!important;
 }
-.about-me {
+.aboutme {
     font-size: 20px;
     line-height: 1.75em;
 }
 .introduction {
     padding-top: 30px;
 }
-.about-me h2 {
+.aboutme h2 {
     font-size: 58px;
     font-weight: 700;
     line-height: 1.3em;
 }
-.subtitle {
+.aboutme-subtitle {
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 400;
+}
+.aboutme-title {
+    text-align: left!important;
 }
