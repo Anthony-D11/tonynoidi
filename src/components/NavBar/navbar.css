@@ -1,7 +1,6 @@
-.navBar {
-    height: 5rem;
-    width: 100vw;
-    max-width: 75rem;
+.navbar {
+    height: 3.5rem;
+    width: 100%;
     margin: 0 auto;
     padding: 1rem 2rem;
     display: flex;
@@ -10,6 +9,8 @@
     position: sticky;
     top: 0;
     z-index: 3;
+    transition: all .3s ease-out 0s!important;
+
 }
 
 .logo {
@@ -42,18 +43,21 @@
     font-family: var(--font-heading);
 }
 
-.navbar-nav .nav-item a:after {
-    background: red;
+.navbar-nav .nav-item a::after {
+    background:cornflowerblue;
     border-radius: 16px;
-    bottom: 1px;
     content: "";
     display: block;
-    height: 5px;
+    width: 0px;
+    height: 3px;
     left: 0;
     position: relative;
     transition: all .3s ease-out 0s;
-    width: 0;
     z-index: -1;
+}
+.navbar-nav .nav-item a:hover::after {
+    width: 100%;
+    transition: all .3s ease-out 0s;
 }
 
 .navbar-nav .nav-item {

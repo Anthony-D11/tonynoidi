@@ -9,7 +9,7 @@ var profilePciture = Data['profile-picture']
 const AboutMe = () => {
   return (
    <section className="section-section">
-    <div id="aboutme" className="container-fluid">
+    <div id="about-me" className="container-fluid">
         <div className="container">
             <div className="row">
                 <div className="d-flex col-md-6 order-md-last aboutme-container">

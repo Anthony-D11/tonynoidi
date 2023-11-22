@@ -4,11 +4,11 @@
 }
 
 .profile-picture-container {
-    padding-right: 150px!important;
+    padding-left: 50px!important;
 }
 
 .aboutme-container {
-    padding-left: 100px!important;
+    padding-left: 90px!important;
 }
 .aboutme {
     font-size: 20px;
@@ -29,4 +29,9 @@
 }
 .aboutme-title {
     text-align: left!important;
+}
+#about-me {
+    background-color: #fff5ec;
+    padding: 70px 40px;
+
 }
