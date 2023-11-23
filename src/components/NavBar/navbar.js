@@ -4,13 +4,19 @@ import {Link} from 'react-scroll';
 
 const NavBar = () => {
     const[scrolled, setNavBar] = useState(false);
-    
-    const isScrolled = () => {
-        if (window.scrollY > 0) setNavBar(true);
-        else setNavBar(false);
-    }
 
-    window.addEventListener('scroll', isScrolled);
+    const isScrolled = () => {
+        const App = document.getElementById("App");
+        if (App) {
+            App.addEventListener("scroll", (event) => {
+                if (event.target.scrollTop > 0) setNavBar(true);
+                else setNavBar(false);
+            });
+
+        }
+    }
+    window.addEventListener("load", isScrolled);
+
     return (
         <nav className={`navbar navbar-expand-md navbar-light fixed-top ${scrolled? 'scrolled': ''}`}>
             <div className="container">
