@@ -26,12 +26,6 @@
 
 }
 
-.mainMenuListItem:hover {
-    color: cornflowerblue;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid cornflowerblue;
-}
-
 .navBar-logo {
     font-size: 1.25rem;
     margin-right: 1rem;

@@ -25,5 +25,23 @@
     ],
     "years-experience": 2,
     "about-me-vn": "Hiện tại mình đang theo học ngành Computer Science (Khoa học máy tính) tại đại học New Brunswick, Canada. Mình đã có cơ hội được làm việc ở nhiều công ty và tập đoàn công nghệ lớn hàng đầu ở Canada. Mình có một kênh Youtube để chia sẻ những kinh nghiệm về lập trình và chuyện du học. Mình còn nhiều thiếu sót lắm nên hy vọng không chỉ đem lại cho các bạn một số kinh nghiệm mà còn mong muốn học hỏi nhiều thứ từ mọi người nữa ❤️",
-    "about-me-en": "Currently, I am pursuing Computer Science at University of New Brunswick, Canada. I had the opportunity to work in many leading tech companies in Canada. I have a Youtube channel to share my experience about programming and studying abroad. I still have a lot of shortcomings so I hope to share with you my experience but I also want to learn things from everyone ❤️" 
+    "about-me-en": "Currently, I am pursuing Computer Science at University of New Brunswick, Canada. I had the opportunity to work in many leading tech companies in Canada. I have a Youtube channel to share my experience about programming and studying abroad. I still have a lot of shortcomings so I hope to share with you my experience but I also want to learn things from everyone ❤️",
+    "social": {
+        "facebook": {
+            "link": "https://www.facebook.com/Dao.Nguyen.Hung.11/",
+            "fontawesome-class": "fab fa-facebook"
+        },
+        "instagram": {
+            "link": "https://www.instagram.com/daoz_poet/",
+            "fontawesome-class": "fab fa-instagram"
+        },
+        "youtube": {
+            "link": "https://www.youtube.com/@tonynoidi",
+            "fontawesome-class": "fab fa-youtube"
+        },
+        "linkedin": {
+            "link": "https://www.linkedin.com/in/its-hung-dao/",
+            "fontawesome-class": "fab fa-linkedin"
+        }
+    }
 }

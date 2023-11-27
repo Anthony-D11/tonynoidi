@@ -1,0 +1,18 @@
+.featured-projects-section {
+    background-color: #f0f0f0;
+    padding: 70px 0 100px 0!important;
+}
+.featured-projects-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+    display: flex;
+    align-items: center;
+}
+.featured-projects-title::before, .featured-projects-title::after {
+    flex: 1;
+    content: '';
+    padding: 1px;
+    background-color: darkgray;
+    margin: 15px;
+  }

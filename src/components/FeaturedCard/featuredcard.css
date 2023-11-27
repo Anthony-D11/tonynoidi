@@ -1,0 +1,23 @@
+.featured-card-image {
+    width: 100% !important;
+    object-fit: contain !important;
+    border-radius: 20px!important;
+    padding: 15px!important;
+}
+.featured-card-container {
+    background-color: white!important;
+    border-radius:  5px!important;
+    color: #fff!important;
+    height: 100%!important;
+    opacity: 1!important;
+    transition: all .5s ease 0s!important;
+}
+.featured-card-title {
+    font-weight: bold;
+    color: black;
+    padding-bottom: 1rem;
+}
+.featured-card-view {
+    padding-left: 25px!important;
+    padding-right: 25px!important;
+}
