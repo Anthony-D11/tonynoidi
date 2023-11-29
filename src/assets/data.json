@@ -1,26 +1,25 @@
 {
-    "profile-picture": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/306604825_1106193139988498_2823113627616380466_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=E0RdggCG3csAX85bs8f&_nc_ht=scontent-lga3-2.xx&oh=00_AfCpY8M-cbXzCJaBbb00_AS5XVbzzKXxOfs0YEwVx8cl6A&oe=6559BAB1",
     "work-experience": [
         {
             "position": "Junior Software Engineer Intern",
             "period": "2023",
             "city": "Fredericton",
             "country": "Canada",
-            "logo": "https://live.staticflickr.com/65535/53335029106_2200a11ee9_o.png"
+            "image-name": "Sonrai.png"
         },
         {
             "position": "Software Developer Intern",
             "period": "2022-2023",
             "city": "Fredericton",
             "country": "Canada",
-            "logo": "https://live.staticflickr.com/65535/53335031866_1bbb284502_o.png"
+            "image-name": "Cvent.png"
         },
         {
             "position": "Security Application Developer Intern",
             "period": "2022",
             "city": "Fredericton",
             "country": "Canada",
-            "logo": "https://live.staticflickr.com/65535/53335513130_dfb70d7c12_o.png"
+            "image-name": "CIC.png"
         }
     ],
     "years-experience": 2,
@@ -28,20 +27,33 @@
     "about-me-en": "Currently, I am pursuing Computer Science at University of New Brunswick, Canada. I had the opportunity to work in many leading tech companies in Canada. I have a Youtube channel to share my experience about programming and studying abroad. I still have a lot of shortcomings so I hope to share with you my experience but I also want to learn things from everyone ❤️",
     "social": {
         "facebook": {
-            "link": "https://www.facebook.com/Dao.Nguyen.Hung.11/",
-            "fontawesome-class": "fab fa-facebook"
+            "link": "https://www.facebook.com/Dao.Nguyen.Hung.11/"
         },
         "instagram": {
-            "link": "https://www.instagram.com/daoz_poet/",
-            "fontawesome-class": "fab fa-instagram"
+            "link": "https://www.instagram.com/daoz_poet/"
         },
         "youtube": {
-            "link": "https://www.youtube.com/@tonynoidi",
-            "fontawesome-class": "fab fa-youtube"
+            "link": "https://www.youtube.com/@tonynoidi"
         },
         "linkedin": {
-            "link": "https://www.linkedin.com/in/its-hung-dao/",
-            "fontawesome-class": "fab fa-linkedin"
+            "link": "https://www.linkedin.com/in/its-hung-dao/"
         }
-    }
+    },
+    "featured-projects": [
+        {
+            "title": "TonyGPT - ChatGPT for Vietnamese",
+            "link": "https://github.com/Anthony-D11/TonyGPT_AI_bot",
+            "image": "https://raw.githubusercontent.com/Anthony-D11/TonyGPT_AI_bot/master/TonyGPT.png"
+        },
+        {
+            "title": "Text Emotion Detection",
+            "link": "https://github.com/Anthony-D11/Text-Emotion-Detection",
+            "image": "https://raw.githubusercontent.com/Anthony-D11/Text-Emotion-Detection/main/TextEmotionDetection.png"
+        },
+        {
+            "title": "Image Compressing Machine Learning Model",
+            "link": "https://github.com/Anthony-D11/ImageCompression",
+            "image": "https://raw.githubusercontent.com/Anthony-D11/ImageCompression/main/ImageCompressor.png"
+        }
+    ]
 }

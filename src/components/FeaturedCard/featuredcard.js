@@ -1,11 +1,10 @@
 import React from 'react'
 import './featuredcard.css'
-import CardImage from '../../assets/card-image.png'
 
 const CardTitle = "Apache Spark Blogs";
 const CardLink = "google.com"
 
-const FeaturedCard = () => {
+const FeaturedCard = ({CardTitle, CardLink, CardImage}) => {
   return (
     <div className="featured-card-view col-md-4" >
         <a href={CardLink} className="featured-card-link">

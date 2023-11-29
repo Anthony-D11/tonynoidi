@@ -1,0 +1,46 @@
+footer {
+    padding: 10px 0 70px;
+}
+
+ul {
+    list-style-type: none;
+}
+li .social-link {
+    margin: 0 13px;
+}
+.social-link {
+    font-size: 28px!important;
+    color: rgb(59, 59, 59);
+}
+.social-icon-list {
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+}
+.mail-icon {
+    background: black;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    font-size: 23px;
+    color: white;
+    margin-right: 10px;
+}
+.mail-icon svg {
+    position: relative;
+    top: calc(50% - 18px);
+}
+.mail-address {
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 18px;
+}
+.mail-container {
+    height: fit-content;
+    flex-direction: row-reverse;
+}
+.mail-link {
+    color: black;
+    text-decoration: none
+}

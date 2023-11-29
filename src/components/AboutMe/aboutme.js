@@ -1,10 +1,11 @@
 import React from 'react'
 import './aboutme.css'
 import Data from '../../assets/data.json';
+import profilePicture from '../../assets/about_me.png';
 
 var introVN = Data['about-me-vn'];
 var introEN = Data['about-me-en'];
-var profilePciture = Data['profile-picture']
+
 
 const AboutMe = () => {
   return (
@@ -22,7 +23,7 @@ const AboutMe = () => {
                     </div>
                 </div>
                 <div className="col-md-6 profile-picture-container">
-                    <img src={profilePciture} alt="about-me" className="profile-picture"/>
+                    <img src={profilePicture} alt="about-me" className="profile-picture"/>
                 </div>
             </div>
         </div>

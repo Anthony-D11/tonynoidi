@@ -1,8 +1,6 @@
 import React from "react";
 import './homepagebanner.css';
-import linkedinConnect from '../../assets/linkedin.png'
-import youtubeConnect from '../../assets/youtube.png'
-import profilePicture from '../../assets/homepagebanner.png'
+import profilePicture from '../../assets/homepagebanner.png';
 
 function HomepageBanner() {
     return (
