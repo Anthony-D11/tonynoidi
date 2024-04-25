@@ -24,7 +24,7 @@ const Footer = () => {
   for (let i = 0; i < 4; i++) {
     social.push(
       <li>
-        <a href={socialProfile[i]["link"]} target="_blank" className="social-link">
+        <a href={socialProfile[i]["link"]} target="_blank" className={`social-link ${Object.keys(Data["social"])[i]}-link`}>
           <FontAwesomeIcon icon={socialIcon[i]} />
         </a>
       </li>

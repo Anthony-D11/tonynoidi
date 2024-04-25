@@ -19,8 +19,7 @@
     padding-bottom: 1rem;
 }
 .featured-card-view {
-    padding-left: 25px!important;
-    padding-right: 25px!important;
+    padding: 15px!important;
 }
 .featured-card-view a{
 }

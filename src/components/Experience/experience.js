@@ -12,7 +12,7 @@ const Experience = () => {
     for (let i = workExperience.length - 1; i >= 0; i--) {
         let logo = require('../../assets/' + workExperience[i]['image-name']);
         work.push(
-            <div className="col-md-3">
+            <div className="col-md-3 experience-card">
                 <div className="card-style" style={{backgroundColor:cardColor[i]}}>
                     <div className="company-logo-container">
                         <img src={logo} alt="" className="company-logo"/>

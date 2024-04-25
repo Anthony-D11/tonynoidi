@@ -1,21 +1,48 @@
 import React, {useState} from "react";
 import './navbar.css';
-import {Link} from 'react-scroll';
+import Data from '../../assets/data.json';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faInstagram, faLinkedin, faYoutube, faSquareFacebook } from '@fortawesome/free-brands-svg-icons';
+
+const Facebook = Data["social"]["facebook"];
+const Instagram = Data["social"]["instagram"];
+const Youtube = Data["social"]["youtube"];
+const Linkedin = Data["social"]["linkedin"];
+
+const FacebookIcon = faSquareFacebook;
+const InstagramIcon = faInstagram;
+const YoutubeIcon = faYoutube;
+const LinkedinIcon = faLinkedin;
+
+var socialProfile = [Facebook, Instagram, Youtube, Linkedin];
+var socialIcon = [FacebookIcon, InstagramIcon, YoutubeIcon, LinkedinIcon];
 
 const NavBar = () => {
     const[scrolled, setNavBar] = useState(false);
-
     const isScrolled = () => {
         const App = document.getElementById("App");
-        if (App) {
-            App.addEventListener("scroll", (event) => {
-                if (event.target.scrollTop > 0) setNavBar(true);
-                else setNavBar(false);
-            });
-
+        while(true) {
+            if (App) {
+                App.addEventListener("scroll", (event) => {
+                    if (event.target.scrollTop > 0) setNavBar(true);
+                    else setNavBar(false);
+                });
+                break;
+            }
         }
     }
     window.addEventListener("load", isScrolled);
+
+    let social = []
+    for (let i = 0; i < 4; i++) {
+      social.push(
+        <li>
+          <a href={socialProfile[i]["link"]} target="_blank" className={`social-link ${Object.keys(Data["social"])[i]}-link`}>
+            <FontAwesomeIcon icon={socialIcon[i]} />
+          </a>
+        </li>
+      )
+    }
 
     return (
         <nav className={`navbar navbar-expand-md navbar-light fixed-top ${scrolled? 'scrolled': ''}`}>
@@ -34,6 +61,9 @@ const NavBar = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
                                 &nbsp;My Favorites
                             </a>
+                        </div>
+                        <div className="nav-item">
+                            <ul className="social-icon-list d-flex">{social}</ul>
                         </div>
                     </div>
                 </div>

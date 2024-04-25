@@ -40,3 +40,6 @@
     flex-direction: column;
     justify-content: center;
 }
+.experience-card {
+    padding: 15px;
+}

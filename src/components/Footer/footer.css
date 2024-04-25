@@ -44,3 +44,24 @@ li .social-link {
     color: black;
     text-decoration: none
 }
+.social-link {
+    display: block;
+    height: fit-content;
+    transition: all .3s ease-out 0s;
+}
+.facebook-link:hover {
+    color: dodgerblue;
+    transition: all .3s ease-out 0s;
+}
+.instagram-link:hover {
+    color: deeppink;
+    transition: all .3s ease-out 0s;
+}
+.youtube-link:hover {
+    color: red;
+    transition: all .3s ease-out 0s;
+}
+.linkedin-link:hover {
+    color: cornflowerblue;
+    transition: all .3s ease-out 0s;
+}
