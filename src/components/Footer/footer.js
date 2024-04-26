@@ -35,11 +35,11 @@ const Footer = () => {
     <footer>
         <div className="container">
             <div className="row">
-                <div className="col-md-4"></div>
+                <div className="col-md-3"></div>
                 <div className="col-md-4">
                   <ul className="social-icon-list d-flex">{social}</ul>
                 </div>
-                <div className="col-md-4 d-flex mail-container">
+                <div className="col-md-4 mail-container">
                   <a href="mailto:hungdao1152002@gmail.com" className="d-flex mail-link">
                     <span className="mail-icon"><FontAwesomeIcon icon={faEnvelope}/></span>
                     <span className="mail-address">hungdao1152002@gmail.com</span>

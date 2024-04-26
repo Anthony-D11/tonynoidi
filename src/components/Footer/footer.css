@@ -42,7 +42,8 @@ li .social-link {
 }
 .mail-link {
     color: black;
-    text-decoration: none
+    text-decoration: none;
+    justify-content: center;
 }
 .social-link {
     display: block;
@@ -64,4 +65,7 @@ li .social-link {
 .linkedin-link:hover {
     color: cornflowerblue;
     transition: all .3s ease-out 0s;
+}
+.container .row {
+    gap: 10px;
 }
