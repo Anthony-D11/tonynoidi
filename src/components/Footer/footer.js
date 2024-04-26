@@ -33,7 +33,7 @@ const Footer = () => {
 
   return (
     <footer>
-        <div className="container">
+        <div className="container footer">
             <div className="row">
                 <div className="col-md-3"></div>
                 <div className="col-md-4">
