@@ -10,14 +10,14 @@ import FeaturedProjects from "./components/FeaturedProjects/featuredprojects";
 
 function App() {
   return (
-    <div id="App" className="App" >
+    <>
       <NavBar/>
       <HomepageBanner/>
       <FeaturedProjects/>
       <Experience/>
       <AboutMe/>
       <Footer/>
-    </div>
+    </>
   );
 }
 
