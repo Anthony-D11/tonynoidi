@@ -20,20 +20,12 @@ var socialIcon = [FacebookIcon, InstagramIcon, YoutubeIcon, LinkedinIcon];
 
 const NavBar = () => {
     const[scrolled, setNavBar] = useState(false);
-    const isScrolled = () => {
-        const App = document.getElementById("App");
-        while(true) {
-            if (App) {
-                App.addEventListener("scroll", (event) => {
-                    if (event.target.scrollTop > 0) setNavBar(true);
-                    else setNavBar(false);
-                });
-                break;
-            }
-        }
-    }
-    window.addEventListener("load", isScrolled);
-
+    
+    window.addEventListener("scroll", (event) => {
+        if (window.scrollY > 0) setNavBar(true);
+        else setNavBar(false);
+    });
+                
     
     const [smallScreen, setSmall] = useState(false);
     const setSize = () => {
