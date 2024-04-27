@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tonynoidi/static/css/main.7dd973d7.css",
-    "main.js": "/tonynoidi/static/js/main.fc82c457.js",
+    "main.css": "/tonynoidi/static/css/main.fc4b0c3c.css",
+    "main.js": "/tonynoidi/static/js/main.c071108e.js",
     "static/media/homepagebanner.png": "/tonynoidi/static/media/homepagebanner.20fb0fb83c4209e66552.png",
     "static/media/about_me.png": "/tonynoidi/static/media/about_me.c7264ce50610073cf786.png",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/tonynoidi/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
@@ -13,11 +13,11 @@
     "static/media/Sonrai.png": "/tonynoidi/static/media/Sonrai.bab04b27d9750c0b8f38.png",
     "static/media/Cvent.png": "/tonynoidi/static/media/Cvent.3298fd3dfea0f829801f.png",
     "index.html": "/tonynoidi/index.html",
-    "main.7dd973d7.css.map": "/tonynoidi/static/css/main.7dd973d7.css.map",
-    "main.fc82c457.js.map": "/tonynoidi/static/js/main.fc82c457.js.map"
+    "main.fc4b0c3c.css.map": "/tonynoidi/static/css/main.fc4b0c3c.css.map",
+    "main.c071108e.js.map": "/tonynoidi/static/js/main.c071108e.js.map"
   },
   "entrypoints": [
-    "static/css/main.7dd973d7.css",
-    "static/js/main.fc82c457.js"
+    "static/css/main.fc4b0c3c.css",
+    "static/js/main.c071108e.js"
   ]
 }
