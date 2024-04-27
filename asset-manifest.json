@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/tonynoidi/static/css/main.fc4b0c3c.css",
-    "main.js": "/tonynoidi/static/js/main.c071108e.js",
-    "static/media/homepagebanner.png": "/tonynoidi/static/media/homepagebanner.20fb0fb83c4209e66552.png",
-    "static/media/about_me.png": "/tonynoidi/static/media/about_me.c7264ce50610073cf786.png",
-    "static/media/fontawesome-webfont.svg?v=4.7.0": "/tonynoidi/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
-    "static/media/fontawesome-webfont.eot": "/tonynoidi/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
-    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/tonynoidi/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
-    "static/media/fontawesome-webfont.woff?v=4.7.0": "/tonynoidi/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
-    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/tonynoidi/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
-    "static/media/CIC.png": "/tonynoidi/static/media/CIC.22e85365060a9329dce6.png",
-    "static/media/Sonrai.png": "/tonynoidi/static/media/Sonrai.bab04b27d9750c0b8f38.png",
-    "static/media/Cvent.png": "/tonynoidi/static/media/Cvent.3298fd3dfea0f829801f.png",
-    "index.html": "/tonynoidi/index.html",
-    "main.fc4b0c3c.css.map": "/tonynoidi/static/css/main.fc4b0c3c.css.map",
-    "main.c071108e.js.map": "/tonynoidi/static/js/main.c071108e.js.map"
+    "main.css": "./static/css/main.74364e4b.css",
+    "main.js": "./static/js/main.a78e0ce3.js",
+    "static/media/homepagebanner.png": "./static/media/homepagebanner.20fb0fb83c4209e66552.png",
+    "static/media/about_me.png": "./static/media/about_me.c7264ce50610073cf786.png",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "./static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/fontawesome-webfont.eot": "./static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "./static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "./static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "./static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/CIC.png": "./static/media/CIC.22e85365060a9329dce6.png",
+    "static/media/Sonrai.png": "./static/media/Sonrai.bab04b27d9750c0b8f38.png",
+    "static/media/Cvent.png": "./static/media/Cvent.3298fd3dfea0f829801f.png",
+    "index.html": "./index.html",
+    "main.74364e4b.css.map": "./static/css/main.74364e4b.css.map",
+    "main.a78e0ce3.js.map": "./static/js/main.a78e0ce3.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc4b0c3c.css",
-    "static/js/main.c071108e.js"
+    "static/css/main.74364e4b.css",
+    "static/js/main.a78e0ce3.js"
   ]
 }
