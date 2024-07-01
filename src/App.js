@@ -1,23 +1,28 @@
 import React from "react";
 import './App.css';
 
-import NavBar from "./components/NavBar/navbar"
-import HomepageBanner from "./components/HomepageBanner/homepagebanner";
-import AboutMe from "./components/AboutMe/aboutme";
-import Experience from "./components/Experience/experience";
+import { 
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+
+import HomePage from "./pages/HomePage";
+import FavoriteMovies from "./pages/FavoriteMovies";
+import NavBar from "./components/NavBar/navbar";
 import Footer from "./components/Footer/footer";
-import FeaturedProjects from "./components/FeaturedProjects/featuredprojects";
 
 function App() {
   return (
-    <>
-      <NavBar/>
-      <HomepageBanner/>
-      <FeaturedProjects/>
-      <Experience/>
-      <AboutMe/>
-      <Footer/>
-    </>
+    <Router>
+        <NavBar />
+        <Routes>
+            <Route exact path="/" element={<HomePage />} />
+            <Route path="/homepage" element={<HomePage />} />
+            <Route path="/favorite-movies" element={<FavoriteMovies />} />
+        </Routes>
+        <Footer />
+    </Router>
   );
 }
 

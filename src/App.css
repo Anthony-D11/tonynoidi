@@ -1,3 +1,46 @@
 .section-section {
     padding: 50px 50px;
 }
+.favorite-movies-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 92px;
+    max-height: 50vh;
+    height: 350px;
+}
+.favorite-movies-header .wrapper {
+    margin-top: auto;
+}
+.favorite-movies-header .search-input {
+    height: 50px;
+    width: 100%;
+    border-radius: 45px;
+    padding-left: 65px;
+    padding-right: 85px;
+    color: black;
+    font-size: 1.5em;
+    border: none;
+    margin: 0;
+    box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, .05);
+}
+.favorite-movies-header .search-icon { 
+    position: absolute;
+    color: black;
+    height: 50px;
+    width: 50px;
+    align-content: center;
+}
+.favorite-movies-header .movie-search { 
+    display: inline-block;
+    padding: 20px;
+    max-width: 980px;
+    width: 80%;
+}
+.favorite-movies-header .btn-primary-submit { 
+    position: absolute;
+    border-radius: 35px;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
