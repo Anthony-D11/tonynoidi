@@ -1,5 +1,5 @@
 .section-section {
-    padding: 50px 50px;
+    padding-top: 3.5rem;
 }
 .favorite-movies-header {
     text-align: center;
@@ -54,4 +54,13 @@
 }
 .favorite-icon:hover {
     cursor: pointer;
+}
+footer {
+    height: 4.5rem;
+    margin-top: auto;
+}
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
