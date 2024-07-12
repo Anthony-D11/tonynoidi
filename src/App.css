@@ -44,3 +44,14 @@
     height: 50px;
     margin-left: 10px;
 }
+.dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #666;
+    display: inline-block;
+    margin: auto 5px;
+}
+.favorite-icon:hover {
+    cursor: pointer;
+}
