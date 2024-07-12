@@ -4,7 +4,6 @@ import '../assets/fontawesome/css/all.min.css';
 import { faSearch, faArrowRight} from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import React from "react";
-import { useState, useEffect} from "react";
 
 import $ from 'jquery';
 

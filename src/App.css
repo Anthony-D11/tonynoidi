@@ -64,3 +64,24 @@ footer {
     display: flex;
     flex-direction: column;
 }
+
+.favorite-movies-header .selection-tab button::after {
+    background:cornflowerblue;
+    border-radius: 16px;
+    content: "";
+    display: block;
+    width: 0px;
+    height: 3px;
+    left: 0.75rem;
+    bottom: 0;
+    position: absolute;
+    transition: all .3s ease-out 0s;
+    z-index: -1;
+}
+.favorite-movies-header .selection-tab button:hover::after {
+    width: calc(100% - 1.5rem);
+    transition: all .3s ease-out 0s;
+}
+.favorite-movies-header .selection-tab {
+    margin-bottom: 20px;
+}
