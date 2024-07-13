@@ -65,6 +65,12 @@ footer {
     flex-direction: column;
 }
 
+.favorite-movies-header .selection-tab .active::after {
+    width: calc(100% - 1.5rem);
+}
+.favorite-movies-header .selection-tab .active {
+    border: 0;
+}
 .favorite-movies-header .selection-tab button::after {
     background:cornflowerblue;
     border-radius: 16px;

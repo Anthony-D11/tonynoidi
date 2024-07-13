@@ -105,15 +105,17 @@ class FavoriteMovies extends React.Component {
     };
 
     async generateFavoriteMovies(){
-        let done = false;
+        $(".favorite-movies-header .selection-tab button").removeClass("active");
+        $(".favorite-movies-header .selection-tab .favorite-movies").addClass("active");
         const url = "https://api.themoviedb.org/3/account/8916436/favorite/movies?language=en-US&page=1&sort_by=created_at.asc";
         let data = await this.queryApi("GET", url);
         await this.setFavoriteMovieList(data);
         this.generateMovies(data);
-
     }
 
     async discoverMovies(){
+        $(".favorite-movies-header .selection-tab button").removeClass("active");
+        $(".favorite-movies-header .selection-tab .discover-movies").addClass("active");
         const url = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc';
         let data = await this.queryApi("GET", url);
         this.generateMovies(data);
@@ -181,8 +183,8 @@ class FavoriteMovies extends React.Component {
                             </form>
                         </div>
                         <div className="selection-tab">
-                            <button className="btn btn-group" onClick={this.generateFavoriteMovies}> My favorites </button>
-                            <button className="btn btn-group" onClick={this.discoverMovies}> Discover </button>
+                            <button className="btn btn-group favorite-movies" onClick={this.generateFavoriteMovies}> My favorites </button>
+                            <button className="btn btn-group discover-movies" onClick={this.discoverMovies}> Discover </button>
                         </div>
                     </div>
                 </div>
