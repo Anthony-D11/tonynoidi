@@ -76,6 +76,15 @@ class FavoriteMovies extends React.Component {
             }).catch(err => console.error("error:" + err));
         return response;
     }
+    constructUrl(rootUrl, pathParameters={}, queryParameters={}) {
+        for (let [key, value] of Object.entries(pathParameters)) {
+            rootUrl = rootUrl.replace(key, value);
+        }
+        for (let [index, [key, value]] of Object.entries(queryParameters)) {
+            rootUrl = rootUrl + index === 0 ? "?" : "&" + `${key}=${value}`;
+        }
+        return rootUrl;
+    }
 
     async generateMovies(data){
         let results = [];
@@ -107,7 +116,24 @@ class FavoriteMovies extends React.Component {
     async generateFavoriteMovies(){
         $(".favorite-movies-header .selection-tab button").removeClass("active");
         $(".favorite-movies-header .selection-tab .favorite-movies").addClass("active");
-        const url = "https://api.themoviedb.org/3/account/8916436/favorite/movies?language=en-US&page=1&sort_by=created_at.asc";
+        const rootUrl = "https://api.themoviedb.org/3/account/account_id/favorite/movies";
+        let pathParameters = {
+            account_id: 8916436
+        };
+        let queryParameters = {
+            language: "en-US",
+            page: 1,
+            sort_by: "created_at.asc"
+        };
+        let currentPage = 1;
+        let done = false;
+        let url = "";
+
+        while (!done) {
+            url = this.constructUrl(rootUrl, pathParameters, queryParameters);
+            let data = await this.queryApi("GET", url);
+        }
+        
         let data = await this.queryApi("GET", url);
         await this.setFavoriteMovieList(data);
         this.generateMovies(data);
@@ -154,12 +180,6 @@ class FavoriteMovies extends React.Component {
         })
     }
 
-    setDone(value) {
-        this.setState(() => ({
-            done: value
-        }));
-    }
-
     render() {
         return (
             <div className="section-section container">
@@ -191,6 +211,10 @@ class FavoriteMovies extends React.Component {
                 <div className="favorite-movies-body">
                     <div id="movie-collection" className="movie-collection">
                         {this.state.movieList}
+                    </div>
+                </div>
+                <div className="favorite-movies-footer">
+                    <div className="pagination">
                     </div>
                 </div>
             </div>
