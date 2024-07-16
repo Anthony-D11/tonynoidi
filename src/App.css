@@ -1,3 +1,144 @@
 .section-section {
-    padding: 50px 50px;
+    padding-top: 3.5rem;
 }
+.favorite-movies-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 92px;
+    max-height: 50vh;
+    height: 350px;
+}
+.favorite-movies-header .wrapper {
+    margin-top: auto;
+}
+.favorite-movies-header .search-input {
+    height: 50px;
+    width: 100%;
+    border-radius: 45px;
+    padding-left: 65px;
+    padding-right: 85px;
+    color: black;
+    font-size: 1.5em;
+    border: none;
+    margin: 0;
+    box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, .05);
+}
+.favorite-movies-header .search-icon { 
+    position: absolute;
+    color: black;
+    height: 50px;
+    width: 50px;
+    align-content: center;
+}
+.favorite-movies-header .movie-search { 
+    display: inline-block;
+    padding: 20px;
+    max-width: 980px;
+    width: 80%;
+}
+.favorite-movies-header .btn-primary-submit { 
+    position: absolute;
+    border-radius: 35px;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+.dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #666;
+    display: inline-block;
+    margin: auto 5px;
+}
+.favorite-icon:hover {
+    cursor: pointer;
+}
+footer {
+    height: 4.5rem;
+    margin-top: auto;
+}
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.favorite-movies-header .selection-tab .active::after {
+    width: calc(100% - 1.5rem);
+}
+.favorite-movies-header .selection-tab .active {
+    border: 0;
+}
+.favorite-movies-header .selection-tab button::after {
+    background:cornflowerblue;
+    border-radius: 16px;
+    content: "";
+    display: block;
+    width: 0px;
+    height: 3px;
+    left: 0.75rem;
+    bottom: 0;
+    position: absolute;
+    transition: all .3s ease-out 0s;
+    z-index: -1;
+}
+.favorite-movies-header .selection-tab button:hover::after {
+    width: calc(100% - 1.5rem);
+    transition: all .3s ease-out 0s;
+}
+.favorite-movies-header .selection-tab {
+    margin-bottom: 20px;
+}
+.favorite-movies-body {
+    margin-bottom: 20px;
+}
+.favorite-movies-footer {
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto 20px;
+}
+.favorite-movies-footer .pagination {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.favorite-movies-footer .pagination div {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.favorite-movies-footer .pagination div.active {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.favorite-movies-footer .pagination div:hover:not(.active) {background-color: #ddd;}
+
+.favorite-movies-header .pagination {
+    display: inline-block;
+    margin: 20px auto;
+}
+
+.favorite-movies-header .pagination div {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.favorite-movies-header .pagination div.active {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.favorite-movies-header .pagination div:hover:not(.active) {background-color: #ddd;}
