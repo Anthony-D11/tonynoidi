@@ -6,6 +6,7 @@ import axios from "axios";
 import React from "react";
 
 import $ from 'jquery';
+let defaultPoster = require('../assets/default_movie_poster.jpeg');
 
 class FavoriteMovies extends React.Component {
 
@@ -14,14 +15,14 @@ class FavoriteMovies extends React.Component {
         this.state = { 
             keywords: "",
             movieList: [],
-            favoriteMovieList: []
-        
+            favoriteMovieList: [],
+            mode: ""
         };
         this.generateFavoriteMovies = this.generateFavoriteMovies.bind(this);
         this.discoverMovies = this.discoverMovies.bind(this);
         this.handleMovieKeywords = this.handleMovieKeywords.bind(this);
         this.searchMovies = this.searchMovies.bind(this);
-        
+        this.setMode = this.setMode.bind(this);
     }
 
     componentDidMount() {
@@ -40,7 +41,6 @@ class FavoriteMovies extends React.Component {
                 $(this).attr("class", "favorite-icon fa-regular fa-heart");
                 root.addOrRemoveFavorite(movieId, false);
             }
-            
         });
     }
 
@@ -76,13 +76,14 @@ class FavoriteMovies extends React.Component {
             }).catch(err => console.error("error:" + err));
         return response;
     }
-    constructUrl(rootUrl, pathParameters={}, queryParameters={}) {
+    constructUrl(rootUrl, queryParameters={}, pathParameters={}) {
         for (let [key, value] of Object.entries(pathParameters)) {
             rootUrl = rootUrl.replace(key, value);
         }
-        for (let [index, [key, value]] of Object.entries(queryParameters)) {
-            rootUrl = rootUrl + index === 0 ? "?" : "&" + `${key}=${value}`;
-        }
+        Object.entries(queryParameters).forEach(([key, value], index) => {
+            rootUrl = rootUrl + (index === 0 ? "?" : "&") + `${key}=${value}`;
+        });
+
         return rootUrl;
     }
 
@@ -98,7 +99,7 @@ class FavoriteMovies extends React.Component {
             }
             results.push(
                 <FeaturedCard TemplateName = "movie" CardTitle={movie["title"]} CardLink={""}
-                                CardImage={"https://image.tmdb.org/t/p/w500" + movie["poster_path"]} Movie={movie}
+                                CardImage={movie["poster_path"] !== null ? "https://image.tmdb.org/t/p/w500" + movie["poster_path"] : defaultPoster} Movie={movie}
                                 />
             )
         }
@@ -107,49 +108,127 @@ class FavoriteMovies extends React.Component {
     }
 
     async searchMovies(event){
-        event.preventDefault();
-        const url = `https://api.themoviedb.org/3/search/movie?query=${this.state.keywords}&include_adult=false&language=en-US&page=1`;
-        let data = await this.queryApi("GET", url);
-        this.generateMovies(data);
+        let requestedPage = 1;
+
+        if (typeof event !== "number") {
+            event.preventDefault();
+        }
+        else {
+            requestedPage = event;
+        }
+        $(".favorite-movies-header .selection-tab button").removeClass("active");
+        this.setMode("search");
+        const rootUrl = "https://api.themoviedb.org/3/search/movie";
+
+        let queryParameters = {
+            query: this.state.keywords,
+            language: "en-US",
+            page: requestedPage
+        };
+        let url = this.constructUrl(rootUrl, queryParameters);
+        let requestedData = await this.queryApi("GET", url);
+        this.showPagination(requestedPage, Math.min(requestedData["total_pages"], 500));
+        this.generateMovies(requestedData);
     };
 
-    async generateFavoriteMovies(){
+    async generateFavoriteMovies(requestedPage = 1){
         $(".favorite-movies-header .selection-tab button").removeClass("active");
         $(".favorite-movies-header .selection-tab .favorite-movies").addClass("active");
+        this.setMode("favorite");
         const rootUrl = "https://api.themoviedb.org/3/account/account_id/favorite/movies";
         let pathParameters = {
             account_id: 8916436
         };
+        let currentPage = 1;
         let queryParameters = {
             language: "en-US",
-            page: 1,
+            page: currentPage,
             sort_by: "created_at.asc"
         };
-        let currentPage = 1;
         let done = false;
         let url = "";
-
-        while (!done) {
-            url = this.constructUrl(rootUrl, pathParameters, queryParameters);
-            let data = await this.queryApi("GET", url);
+        let allData = {
+            "results": []
         }
-        
-        let data = await this.queryApi("GET", url);
-        await this.setFavoriteMovieList(data);
-        this.generateMovies(data);
+        let requestedData;
+        if (typeof requestedPage !== "number") {
+            requestedPage = parseInt(requestedPage.target.getAttribute("data-page"));
+        }
+        while (!done) {
+            queryParameters.page = currentPage;
+            url = this.constructUrl(rootUrl, queryParameters, pathParameters);
+            let data = await this.queryApi("GET", url);
+            allData["results"] = allData["results"].concat(data["results"]);
+            if (data["page"] === requestedPage) {
+                requestedData = data;
+            }
+            if (currentPage >= data["total_pages"]) {
+                done = true;
+            }
+            currentPage++;
+        }
+        this.showPagination(requestedPage, Math.min(requestedData["total_pages"], 500));
+        await this.setFavoriteMovieList(allData);
+        this.generateMovies(requestedData);
     }
 
-    async discoverMovies(){
+    async discoverMovies(requestedPage = 1){
         $(".favorite-movies-header .selection-tab button").removeClass("active");
         $(".favorite-movies-header .selection-tab .discover-movies").addClass("active");
-        const url = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc';
-        let data = await this.queryApi("GET", url);
-        this.generateMovies(data);
+        this.setMode("discover");
+        const rootUrl = "https://api.themoviedb.org/3/discover/movie";
+        if (typeof requestedPage !== "number") {
+            requestedPage = parseInt(requestedPage.target.getAttribute("data-page"));
+        }
+        let queryParameters = {
+            language: "en-US",
+            page: requestedPage,
+            sort_by: "popularity.desc"
+        };
+        let url = "";
+        url = this.constructUrl(rootUrl ,queryParameters);
+        let requestedData = await this.queryApi("GET", url);
+        this.showPagination(requestedPage, Math.min(requestedData["total_pages"], 500));
+        this.generateMovies(requestedData);
     }
+
+    showPagination(currentPage, totalPages) {
+        let executionMethod;
+        if (this.state.mode === "favorite") {
+            executionMethod = this.generateFavoriteMovies;
+        }
+        else if (this.state.mode === "discover") {
+            executionMethod = this.discoverMovies;
+        }
+        else if (this.state.mode === "search") {
+            executionMethod = this.searchMovies;
+        }
+        $(".pagination").empty();
+        for (let page = Math.max(currentPage - 2, 1); page <= Math.min(currentPage + 2, totalPages); page++) {
+            if (page === currentPage) {
+                $(".pagination").append(`<div class="page-item active" data-page="${page}">${page}</div>`);
+            }
+            else {
+                $(".pagination").append(`<div class="page-item" data-page="${page}">${page}</div>`);
+            }
+        }
+        $(".pagination").prepend(`<div class='page-item' data-page="1">«</div><div class='page-item' data-page="${Math.max(currentPage - 1, 1)}">←</div>`);
+        $(".pagination").append(`<div class='page-item' data-page="${Math.min(currentPage + 1, totalPages)}">→</div><div class='page-item' data-page="${totalPages}">»</div>`);
+        $(".pagination .page-item").on("click", function () {
+            executionMethod(parseInt($(this).attr("data-page")));
+        });
+    }
+
 
     handleMovieKeywords(event) {
         this.setState(() => ({
             keywords: event.target.value
+        }));
+    }
+
+    setMode(modeIn) {
+        this.setState(() => ({
+            mode: modeIn
         }));
     }
 
@@ -192,10 +271,10 @@ class FavoriteMovies extends React.Component {
                                     <FontAwesomeIcon icon={faSearch}/>
                                 </div>
                                 <input type="text"
-                                    className="search-input"
-                                    placeholder="Enter keywords..."
-                                    value={this.state.keywords}
-                                    onChange={this.handleMovieKeywords}
+                                       className="search-input"
+                                       placeholder="Enter keywords..."
+                                       value={this.state.keywords}
+                                       onChange={this.handleMovieKeywords}
                                 />
                                 <button type="submit" className="btn btn-primary btn-primary-submit">
                                     <FontAwesomeIcon icon={faArrowRight}/>
@@ -203,8 +282,14 @@ class FavoriteMovies extends React.Component {
                             </form>
                         </div>
                         <div className="selection-tab">
-                            <button className="btn btn-group favorite-movies" onClick={this.generateFavoriteMovies}> My favorites </button>
-                            <button className="btn btn-group discover-movies" onClick={this.discoverMovies}> Discover </button>
+                            <button className="btn btn-group favorite-movies" data-page="1"
+                                    onClick={this.generateFavoriteMovies}> My favorites
+                            </button>
+                            <button className="btn btn-group discover-movies" data-page="1"
+                                    onClick={this.discoverMovies}> Discover
+                            </button>
+                        </div>
+                        <div className="pagination">
                         </div>
                     </div>
                 </div>
