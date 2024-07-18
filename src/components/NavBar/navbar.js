@@ -47,7 +47,7 @@ const NavBar = () => {
     for (let i = 0; i < 4; i++) {
       social.push(
         <li>
-          <a href={socialProfile[i]["link"]} target="_blank" className={`social-link ${Object.keys(Data["social"])[i]}-link`}>
+          <a href={socialProfile[i]["link"]} target="_blank" rel="noreferrer" className={`social-link ${Object.keys(Data["social"])[i]}-link`}>
             <FontAwesomeIcon icon={socialIcon[i]} />
           </a>
         </li>

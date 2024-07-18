@@ -3,6 +3,7 @@ import './featuredcard.css'
 import '../../assets/fontawesome/css/all.min.css';
 
 const FeaturedCard = ({TemplateName, CardTitle, CardLink, CardImage, OptionalClass = "", Movie = {}}) => {
+  console.log(CardLink);
   return (
     <div className={`featured-card-view ${OptionalClass}`} >
         <div className="featured-card-container mx-auto card">
