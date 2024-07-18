@@ -1,23 +1,33 @@
 {
   "files": {
-    "main.css": "./static/css/main.74364e4b.css",
-    "main.js": "./static/js/main.a78e0ce3.js",
+    "main.css": "./static/css/main.6d68a721.css",
+    "main.js": "./static/js/main.c35859f1.js",
     "static/media/homepagebanner.png": "./static/media/homepagebanner.20fb0fb83c4209e66552.png",
     "static/media/about_me.png": "./static/media/about_me.c7264ce50610073cf786.png",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "./static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/fa-solid-900.ttf": "./static/media/fa-solid-900.bacd5de623fb563b961a.ttf",
+    "static/media/fa-brands-400.ttf": "./static/media/fa-brands-400.60127e352b7a11f7f1bc.ttf",
     "static/media/fontawesome-webfont.eot": "./static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "./static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fa-solid-900.woff2": "./static/media/fa-solid-900.4d986b00ff9ca3828fbd.woff2",
+    "static/media/fa-brands-400.woff2": "./static/media/fa-brands-400.455ea818179b4def0c43.woff2",
     "static/media/fontawesome-webfont.woff?v=4.7.0": "./static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "./static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/fa-regular-400.ttf": "./static/media/fa-regular-400.eb91f7b948a42799f678.ttf",
     "static/media/CIC.png": "./static/media/CIC.22e85365060a9329dce6.png",
+    "static/media/Sprypoint.png": "./static/media/Sprypoint.e6d7d488416d014d2471.png",
     "static/media/Sonrai.png": "./static/media/Sonrai.bab04b27d9750c0b8f38.png",
+    "static/media/default_movie_poster.jpeg": "./static/media/default_movie_poster.cf92e45ee113ca8af31a.jpeg",
+    "static/media/fa-regular-400.woff2": "./static/media/fa-regular-400.21cb8f55d8e0c5b89751.woff2",
     "static/media/Cvent.png": "./static/media/Cvent.3298fd3dfea0f829801f.png",
+    "static/media/fa-v4compatibility.ttf": "./static/media/fa-v4compatibility.c8e090db312b0bea2aa2.ttf",
+    "static/media/fa-v4compatibility.woff2": "./static/media/fa-v4compatibility.cf7f5903d06b79ad60f1.woff2",
     "index.html": "./index.html",
-    "main.74364e4b.css.map": "./static/css/main.74364e4b.css.map",
-    "main.a78e0ce3.js.map": "./static/js/main.a78e0ce3.js.map"
+    "main.6d68a721.css.map": "./static/css/main.6d68a721.css.map",
+    "main.c35859f1.js.map": "./static/js/main.c35859f1.js.map"
   },
   "entrypoints": [
-    "static/css/main.74364e4b.css",
-    "static/js/main.a78e0ce3.js"
+    "static/css/main.6d68a721.css",
+    "static/js/main.c35859f1.js"
   ]
 }
