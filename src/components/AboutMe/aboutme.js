@@ -3,8 +3,7 @@ import './aboutme.css'
 import Data from '../../assets/data.json';
 import profilePicture from '../../assets/about_me.png';
 
-var introVN = Data['about-me-vn'];
-var introEN = Data['about-me-en'];
+let introEN = Data['about-me-en'];
 
 
 const AboutMe = () => {

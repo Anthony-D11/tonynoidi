@@ -1,6 +1,5 @@
 import React from "react";
 import './homepagebanner.css';
-import profilePicture from '../../assets/homepagebanner.png';
 
 function HomepageBanner() {
     return (
