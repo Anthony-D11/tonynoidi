@@ -4,6 +4,7 @@ import Data from '../../assets/data.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faInstagram, faLinkedin, faYoutube, faSquareFacebook } from '@fortawesome/free-brands-svg-icons';
 import {MdOutlineMenu, MdClose} from 'react-icons/md';
+import {Link} from "react-router-dom";
 
 const Facebook = Data["social"]["facebook"];
 const Instagram = Data["social"]["instagram"];
@@ -57,7 +58,7 @@ const NavBar = () => {
     return (
         <nav className={`navbar navbar-expand-md navbar-light fixed-top ${scrolled? 'scrolled': ''} ${isActive? 'dropdown': ''}`}>
             <div className="container">
-                <a href="/homepage" className="d-flex navbar-brand"><strong>Tony Nói Đi</strong></a>
+                <Link to="/homepage" className="d-flex navbar-brand"><strong>Tony Nói Đi</strong></Link>
                 <div className="navbar-collapse collapse">
                     <div className="ms-auto navbar-nav">
                         <div className="nav-item">
