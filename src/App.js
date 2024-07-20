@@ -18,7 +18,6 @@ function App() {
         <NavBar />
         <Routes>
             <Route exact path="/" element={<HomePage />} />
-            <Route path="/homepage" element={<HomePage />} />
             <Route path="/favorite-movies" element={<FavoriteMovies />} />
         </Routes>
         <Footer />
